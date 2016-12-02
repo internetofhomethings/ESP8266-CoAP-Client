@@ -31,12 +31,12 @@ const IPAddress  ipgat(192,168,0,1);    //Local router IP
 
 Change the following in the sketch.h file per your preference
 
-#define SVR_TYPE SVR_HTTP_SDK      //Use SDK HTTP Server
-#define MQTT_SVR_ENABLE 0          //Disable MQTT Server
-#define EXTERNAL_COAP_SVR 1        //Use external domain for coap server if 1, local server if 0
+define SVR_TYPE SVR_HTTP_SDK      //Use SDK HTTP Server
+define MQTT_SVR_ENABLE 0          //Disable MQTT Server
+define EXTERNAL_COAP_SVR 1        //Use external domain for coap server if 1, local server if 0
 
-#define SERBAUD 115200
-#define SVRPORT 9706               //This local ESP http server port
+define SERBAUD 115200
+define SVRPORT 9706               //This local ESP http server port
 
 Option 1: 
 If coap server set to #define EXTERNAL_COAP_SVR 0, then 
