@@ -81,7 +81,7 @@ Http Server Reply: http GET 'CoAPGetReply' required to get CoAP reply<br>
 192.168.0.141:9706/?request=CoAPGetSensors<br>
 Http Server Reply: http GET 'CoAPGetReply' r<br>equired to get CoAP reply<br>
 <strong>Test Case 4.2: Get CoAP Server Sensor Values</strong><br>
-192.168.0.141:9706/?request=CoAPGetReply<br><br>
+192.168.0.141:9706/?request=CoAPGetReply<br>
 CoAP Server Reply:<br>
 
 A JSON string is returned with the sensor values in this format:<br>
