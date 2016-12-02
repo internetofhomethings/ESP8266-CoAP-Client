@@ -66,14 +66,14 @@ CoAP Client test (Assuming client IP set to 192.168.0.141 and port set to 9706, 
 192.168.0.141:9706/?request=CoAPLedOff<br>
 Http Server Reply: http GET 'CoAPGetReply' required to get CoAP reply<br>
 <strong>Test Case 1.2: Set CoAP Server LED Off</strong><br>
-192.168.0.141:9706/?request=CoAPGetReply<br><br>
-CoAP Server Reply0<br>
+192.168.0.141:9706/?request=CoAPGetReply<br>
+CoAP Server Reply: 0<br>
 <strong>Test Case 2.1: Set CoAP Server LED O</strong>n<br>
 192.168.0.141:9706/?request=CoAPLedOff<br>
 Http Server Reply: http GET 'CoAPGetReply' required to get CoAP reply<br>
 <strong>Test Case 2.2: Set CoAP Server LED On</strong><br>
-192.168.0.141:9706/?request=CoAPGetReply<br><br>
-CoAP Server Reply1<br>
+192.168.0.141:9706/?request=CoAPGetReply<br>
+CoAP Server Reply: 1<br>
 <strong>Test Case 3.1: Set CoAP Server LED Blinking 3 times</strong><br>
 192.168.0.141:9706/?request=CoAPLedBlink&cnt=3<br>
 Http Server Reply: http GET 'CoAPGetReply' required to get CoAP reply<br>
@@ -82,7 +82,7 @@ Http Server Reply: http GET 'CoAPGetReply' required to get CoAP reply<br>
 Http Server Reply: http GET 'CoAPGetReply' r<br>equired to get CoAP reply<br>
 <strong>Test Case 4.2: Get CoAP Server Sensor Values</strong><br>
 192.168.0.141:9706/?request=CoAPGetReply<br><br>
-CoAP Server Reply1:<br>
+CoAP Server Reply:<br>
 
 A JSON string is returned with the sensor values in this format:<br>
 
