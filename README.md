@@ -12,31 +12,31 @@ all 3 protocols activated. It is recommended that only 2 of the 3 protocols be e
 same time. For the purpose of this CoAP client project, it is recommended to disable the mqtt protocol.
 
 
-Setup:
+Setup:<br>
 
-1.0 Copy the http_coap_mqtt_client folder to your Arduino sketch folder.
-2.0 Copy the UtilityFunctions folder to your Arduino libraries folder.
-3.0 Copy the coap folder to your Arduino libraries folder.
-4.0 Copy the webserver folder to your Arduino libraries folder.
-5.0 Change the following in the http_coap_mqtt_client.ino file to match your network settings:
+1.0 Copy the http_coap_mqtt_client folder to your Arduino sketch folder.<br>
+2.0 Copy the UtilityFunctions folder to your Arduino libraries folder.<br>
+3.0 Copy the coap folder to your Arduino libraries folder.<br>
+4.0 Copy the webserver folder to your Arduino libraries folder.<br>
+5.0 Change the following in the http_coap_mqtt_client.ino file to match your network settings:<br>
 
-const char* ssid          = "YOURWIFISSID";
-const char* password      = "YOURWIFIPASSWORD";
-const char* domaincoapsvr = "YOURCOAPSERVERDOMAIN";
+const char* ssid          = "YOURWIFISSID";<br>
+const char* password      = "YOURWIFIPASSWORD";<br>
+const char* domaincoapsvr = "YOURCOAPSERVERDOMAIN";<br>
 
-const IPAddress  ipadd(192,168,0,141);  //This ESP8266 IP   
-const IPAddress  ipgat(192,168,0,1);    //Local router IP      
+const IPAddress  ipadd(192,168,0,141);  //This ESP8266 IP<br>   
+const IPAddress  ipgat(192,168,0,1);    //Local router IP<br>      
 
-6.0 Server Setting
+6.0 Server Setting<br>
 
-Change the following in the sketch.h file per your preference
+Change the following in the sketch.h file per your preference<br>
 
-define SVR_TYPE SVR_HTTP_SDK      //Use SDK HTTP Server
-define MQTT_SVR_ENABLE 0          //Disable MQTT Server
-define EXTERNAL_COAP_SVR 1        //Use external domain for coap server if 1, local server if 0
+define SVR_TYPE SVR_HTTP_SDK      //Use SDK HTTP Server<br>
+define MQTT_SVR_ENABLE 0          //Disable MQTT Server<br>
+define EXTERNAL_COAP_SVR 1        //Use external domain for coap server if 1, local server if 0<br>
 
-define SERBAUD 115200
-define SVRPORT 9706               //This local ESP http server port
+define SERBAUD 115200<br>
+define SVRPORT 9706               //This local ESP http server port<br>
 
 Option 1:<br> 
 If coap server set to #define EXTERNAL_COAP_SVR 0, then<br> 
@@ -63,15 +63,15 @@ Start the ESP8266 CoAP client as well as your CoAP Server.
 CoAP Client test (Assuming client IP set to 192.168.0.141 and port set to 9706, adjust per your setup):
 
 
-Test Case                             URL (192.168.0.141:9706) Suffix	http Reply<br>
------------------------               -------------------------------   --------------------------------------------------<br>
-Set CoAP Server LED Off	              /?request=CoAPLedOff	            http GET 'CoAPGetReply' required to get CoAP reply<br>
-Set CoAP Server LED Off	              /?request=CoAPGetReply	        0<br>
-Set CoAP Server LED On	              /?request=CoAPLedOn	            http GET 'CoAPGetReply' required to get CoAP reply<br>
-Set CoAP Server LED On	              /?request=CoAPGetReply	        1<br>
-Set CoAP Server LED Blinking 3 times  /?request=CoAPLedBlink&cnt=3	    http GET 'CoAPGetReply' required to get CoAP reply<br>
-Get CoAP Server Sensor Values	      /?request=CoAPGetSensors	        http GET 'CoAPGetReply' required to get CoAP reply<br>
-Get CoAP Server Sensor Values	      /?request=CoAPGetReply	        JSON String (See below)<br>
+Test Case..............................URL (192.168.0.141:9706) Suffix...http Reply<br>
+-----------------------................-------------------------------...--------------------------------------------------<br>
+Set CoAP Server LED Off................/?request=CoAPLedOff..............http GET 'CoAPGetReply' required to get CoAP reply<br>
+Set CoAP Server LED Off................/?request=CoAPGetReply............0<br>
+Set CoAP Server LED On................./?request=CoAPLedOn...............http GET 'CoAPGetReply' required to get CoAP reply<br>
+Set CoAP Server LED On................./?request=CoAPGetReply............1<br>
+Set CoAP Server LED Blinking 3 times.../?request=CoAPLedBlink&cnt=3......http GET 'CoAPGetReply' required to get CoAP reply<br>
+Get CoAP Server Sensor Values........../?request=CoAPGetSensors..........http GET 'CoAPGetReply' required to get CoAP reply<br>
+Get CoAP Server Sensor Values........../?request=CoAPGetReply............JSON String (See below)<br>
 
 
 A JSON string will be returned with the sensor values in this format:
