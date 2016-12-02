@@ -63,15 +63,14 @@ Start the ESP8266 CoAP client as well as your CoAP Server.
 CoAP Client test (Assuming client IP set to 192.168.0.141 and port set to 9706, adjust per your setup):
 
 
-Test Case..............................URL (192.168.0.141:9706) Suffix...http Reply<br>
------------------------................-------------------------------...--------------------------------------------------<br>
-Set CoAP Server LED Off................/?request=CoAPLedOff..............http GET 'CoAPGetReply' required to get CoAP reply<br>
-Set CoAP Server LED Off................/?request=CoAPGetReply............0<br>
-Set CoAP Server LED On................./?request=CoAPLedOn...............http GET 'CoAPGetReply' required to get CoAP reply<br>
-Set CoAP Server LED On................./?request=CoAPGetReply............1<br>
-Set CoAP Server LED Blinking 3 times.../?request=CoAPLedBlink&cnt=3......http GET 'CoAPGetReply' required to get CoAP reply<br>
-Get CoAP Server Sensor Values........../?request=CoAPGetSensors..........http GET 'CoAPGetReply' required to get CoAP reply<br>
-Get CoAP Server Sensor Values........../?request=CoAPGetReply............JSON String (See below)<br>
+Test Case...................................................URL (192.168.0.141:9706) Suffix...http Reply<br><br>
+Set CoAP Server LED Off................................../?request=CoAPLedOff..............http GET 'CoAPGetReply' required to get CoAP reply<br>
+Set CoAP Server LED Off................................../?request=CoAPGetReply............0<br>
+Set CoAP Server LED On.................................../?request=CoAPLedOn...............http GET 'CoAPGetReply' required to get CoAP reply<br>
+Set CoAP Server LED On.................................../?request=CoAPGetReply............1<br>
+Set CoAP Server LED Blinking 3 times.........../?request=CoAPLedBlink&cnt=3......http GET 'CoAPGetReply' required to get CoAP reply<br>
+Get CoAP Server Sensor Values....................../?request=CoAPGetSensors..........http GET 'CoAPGetReply' required to get CoAP reply<br>
+Get CoAP Server Sensor Values....................../?request=CoAPGetReply............JSON String (See below)<br>
 
 
 A JSON string will be returned with the sensor values in this format:
